@@ -6,9 +6,6 @@ on:
             working-directory:
                 type: string
                 required: true
-            docker_hub_user:
-                type: string
-                required: true
 
         secrets:
             tf_api_token:
