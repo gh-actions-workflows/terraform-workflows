@@ -3,9 +3,13 @@ name: Terraform
 on:
     workflow_call:
         inputs:
-            working-directory:
-                type: string
-                required: true
+          terraform_version:
+            type: string
+            default: '1.7.5'
+          working-directory:
+              type: string
+              required: true
+          
 
         secrets:
             tf_api_token:
@@ -22,8 +26,9 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Terraform Setup
-      uses: hashicorp/setup-terraform@v2
+      uses: hashicorp/setup-terraform@v3
       with:
+        terraform_version: ${{ inputs.terraform_version }}
         cli_config_credentials_token: ${{ secrets.tf_api_token }}
         terraform_wrapper: false        
 
