@@ -5,7 +5,7 @@ Faça o deploy do seu código Terraform com apenas um arquivo.
 ## Como utilizar?
 
 ```yaml
-name: Desploy Infra
+name: Deploy Infra
 on: [push]
 
 jobs:
