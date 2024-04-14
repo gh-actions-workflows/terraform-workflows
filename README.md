@@ -1,4 +1,4 @@
-# Terraform Action
+# Terraform Workflow
 
 Faça o deploy do seu código Terraform com apenas um arquivo.
 
